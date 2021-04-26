@@ -15,7 +15,7 @@ app = dash.Dash(__name__,external_stylesheets=external_stylesheets)
 df = pd.read_csv('C:\\Users\\user\\PlotlyDash\\owid-covid-data.csv')
 
 fig = px.scatter_geo(df, locations="iso_code", color="total_cases",
-                     hover_name="location", size="total_cases",
+                     hover_name="location", size="population",
                      animation_frame="date",
                      projection="natural earth")
 
